@@ -1,5 +1,11 @@
+import Logo from '../assets/icon.png';
 export const Header = () => {
   return (
-    <div>Header</div>
+    <header>
+        <div className="logo">
+            <img src={Logo} alt="Taskmate logo" />
+            <span>Taskmate</span>
+        </div>
+    </header>
   )
 }
