@@ -1,20 +1,16 @@
-export const ShowTask = () => {
-  const tasks = [
-    {id:10001,name: 'Task A',time: '2:09:01 AM 9/14/2030'},
-    {id:10002,name: 'Task B',time: '2:09:01 AM 9/14/2030'},
-    {id:10003,name: 'Task C',time: '2:09:01 AM 9/14/2030'},
-  ]
+export const ShowTask = ({tasklist, setTasklist}) => {
+ 
   return (
     <section className="showTask">
       <div className="head">
         <div>
           <span className="title">Todo</span>
-          <span className="count">0</span>
+          <span className="count">{tasklist.length}</span>
         </div>
         <button className="clearAll">Clear All</button>
       </div>
       <ul>
-        {tasks.map(task => (
+        {tasklist.map((task) => (
           <li>
             <p>
               <span className="name">{task.name}</span>
