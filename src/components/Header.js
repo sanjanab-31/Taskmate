@@ -13,7 +13,7 @@ export const Header = () => {
           <span className="gone"></span>
           <span className="gTwo"></span>
           <span className="gThree"></span>
-        </div>
+        </div> 
     </header>
   )
 }
