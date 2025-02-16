@@ -1,4 +1,4 @@
-export const AddTask = ({tasklist, setTasklist}) => {
+export const AddTask = ({tasklist, setTasklist,task,settask}) => {
 
   const handleSubmit = (e) => {
       e.preventDefault();
