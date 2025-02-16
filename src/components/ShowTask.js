@@ -1,4 +1,9 @@
 export const ShowTask = () => {
+  const tasks = [
+    {id:10001,name: 'Task A',time: '2:09:01 AM 9/14/2030'},
+    {id:10002,name: 'Task B',time: '2:09:01 AM 9/14/2030'},
+    {id:10003,name: 'Task C',time: '2:09:01 AM 9/14/2030'},
+  ]
   return (
     <section className="showTask">
       <div className="head">
@@ -9,6 +14,7 @@ export const ShowTask = () => {
         <button className="clearAll">Clear All</button>
       </div>
       <ul>
+        {tasks.map(task => (
           <li>
             <p>
               <span className="name">Task A</span>
@@ -17,7 +23,8 @@ export const ShowTask = () => {
             <i className="bi bi-pencil-square"></i>
             <i className="bi bi-trash"></i>
           </li>
-        </ul>
+        ))}
+      </ul>
     </section>
   )
 }

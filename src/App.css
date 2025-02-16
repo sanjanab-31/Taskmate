@@ -91,6 +91,15 @@
   .addTask form button:hover{
     background-color: #03b056;
   }
+
+  .showTask{
+    padding: 20px 15px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    margin: 20px auto;
+    box-shadow: var(--box-shadow);
+}
+
   .showTask div.head{
   padding: 10px 0px 20px 0px;
   border-bottom: 1px solid #dfdfdf;
