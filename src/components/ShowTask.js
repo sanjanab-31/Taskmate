@@ -1,5 +1,11 @@
-export const ShowTask = ({tasklist, setTasklist,task,settask}) => {
- 
+export const ShowTask = ({tasklist, setTasklist,task,setTask}) => {
+
+  const handleEdit = (id) => {
+    const selectedTask = tasklist.find((todo) => todo.id === id);
+    setTask(selectedTask);
+    // const updatedTasklist = tasklist.filter((todo) => todo.id !== id);
+    // setTasklist(updatedTasklist);
+  }
 
   const handleDelete = (id) => {
     const updatedTasklist = tasklist.filter((todo) => todo.id !== id);
@@ -22,8 +28,8 @@ export const ShowTask = ({tasklist, setTasklist,task,settask}) => {
               <span className="name">{todo.name}</span>
               <span className="time">{todo.time}</span>
             </p>
-            <i className="bi bi-pencil-square"></i>
-            <i onClick={()=> handleDelete(todo.id)}className="bi bi-trash"></i>
+            <i onClick={()=> handleEdit(todo.id)} className="bi bi-pencil-square"></i>
+            <i onClick={()=> handleDelete(todo.id)} className="bi bi-trash"></i>
           </li>
         ))}
       </ul>
