@@ -1,5 +1,6 @@
 import Logo from '../assets/icon.png';
 export const Header = () => {
+  
   return (
     <header>
         <div className="logo">
